@@ -14975,59 +14975,6 @@ out = output[:, -1]</code></pre>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># def forward_back_prop(rnn, optimizer, criterion, inp, target, hidden):</span>
-<span class="c1">#     &quot;&quot;&quot;</span>
-<span class="c1">#     Forward and backward propagation on the neural network</span>
-<span class="c1">#     :param decoder: The PyTorch Module that holds the neural network</span>
-<span class="c1">#     :param decoder_optimizer: The PyTorch optimizer for the neural network</span>
-<span class="c1">#     :param criterion: The PyTorch loss function</span>
-<span class="c1">#     :param inp: A batch of input to the neural network</span>
-<span class="c1">#     :param target: The target output for the batch of input</span>
-<span class="c1">#     :return: The loss and the latest hidden state Tensor</span>
-<span class="c1">#     &quot;&quot;&quot;</span>
-    
-<span class="c1">#     # TODO: Implement Function</span>
-    
-<span class="c1">#     # move data to GPU, if available</span>
-<span class="c1">#     if(train_on_gpu):</span>
-<span class="c1">#         rnn.cuda()</span>
-<span class="c1">#     # perform backpropagation and optimization</span>
-<span class="c1">#     hid = tuple([each.data for each in hidden])</span>
-
-<span class="c1">#     rnn.zero_grad()</span>
-    
-<span class="c1">#     if(train_on_gpu):</span>
-<span class="c1">#         inp, target = inp.cuda(), target.cuda()</span>
-
-<span class="c1">#     # get the output from the model</span>
-<span class="c1">#     output, hid = rnn(inp, hid)</span>
-
-<span class="c1">#     loss = criterion(output, target)</span>
-<span class="c1">#     loss.backward()</span>
-<span class="c1">#     nn.utils.clip_grad_norm_(rnn.parameters(), 5)</span>
-<span class="c1">#     optimizer.step()</span>
-
-<span class="c1">#     return loss.item(), hid</span>
-
-<span class="c1"># # Note that these tests aren&#39;t completely extensive.</span>
-<span class="c1"># # they are here to act as general checks on the expected outputs of your functions</span>
-<span class="c1"># &quot;&quot;&quot;</span>
-<span class="c1"># DON&#39;T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE</span>
-<span class="c1"># &quot;&quot;&quot;</span>
-<span class="c1"># tests.test_forward_back_prop(RNN, forward_back_prop, train_on_gpu)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
